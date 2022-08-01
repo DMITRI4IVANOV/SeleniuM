@@ -12,21 +12,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SeleniuMFormTest {
 
-        WebDriver driver;
+    WebDriver driver;
 
     @BeforeAll
-    public static void setUpAll1 (){
-        System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+    public static void setUpAll1() {
+        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
     }
-        @BeforeAll
-        static void setupAll() {
-            WebDriverManager.chromedriver().setup();
-        }
 
-        @BeforeEach
-        void setup() {
-            driver = new ChromeDriver();
-        }
+    @BeforeAll
+    static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
+
+    @BeforeEach
+    void setup() {
+        driver = new ChromeDriver();
+    }
 
     @BeforeEach
     void setUpsetUp() {
@@ -37,11 +38,11 @@ public class SeleniuMFormTest {
         driver = new ChromeDriver(options);
     }
 
-       @AfterEach
-    public  void tearDown() {
-            driver.quit();
-            driver = null;
-        }
+    @AfterEach
+    public void tearDown() {
+        driver.quit();
+        driver = null;
+    }
 
     @Test
 //    cssSelector
