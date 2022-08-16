@@ -12,42 +12,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SeleniuMFormTest {
 
-    WebDriver driver;
-//
-//@BeforeEach
-//void setup() {
-//    driver = WebDriverManager.chromedriver().create();
-//}
-//
-//    @AfterEach
-//    void teardown () {
-//        driver.quit();
-//    }
-//
-//    @Test
-//    void test() {
-//        // Your test logic here
-//    }
-//
-    
-//    
-    @BeforeAll
-    public static void setUpAll1() {
-        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-    }
+    private WebDriver driver;
 
     @BeforeAll
-    static void setupAll() {
+    static void setUpAll() {
         WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
-    void setup() {
-        driver = new ChromeDriver();
-    }
-
-    @BeforeEach
-    void setUpsetUp() {
+    void setUp() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
@@ -60,6 +33,36 @@ public class SeleniuMFormTest {
         driver.quit();
         driver = null;
     }
+//
+//    @BeforeAll
+//    public static void setUpAll1() {
+//        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+//    }
+//
+//    @BeforeAll
+//    static void setupAll() {
+//        WebDriverManager.chromedriver().setup();
+//    }
+//
+//    @BeforeEach
+//    void setup() {
+//        driver = new ChromeDriver();
+//    }
+//
+//    @BeforeEach
+//    void setUpsetUp() {
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--headless");
+//        driver = new ChromeDriver(options);
+//    }
+//
+//    @AfterEach
+//    public void tearDown() {
+//        driver.quit();
+//        driver = null;
+//    }
     @Test
 //    cssSelector
     void shouldTestData() {
