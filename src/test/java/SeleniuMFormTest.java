@@ -33,36 +33,7 @@ public class SeleniuMFormTest {
         driver.quit();
         driver = null;
     }
-//
-//    @BeforeAll
-//    public static void setUpAll1() {
-//        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-//    }
-//
-//    @BeforeAll
-//    static void setupAll() {
-//        WebDriverManager.chromedriver().setup();
-//    }
-//
-//    @BeforeEach
-//    void setup() {
-//        driver = new ChromeDriver();
-//    }
-//
-//    @BeforeEach
-//    void setUpsetUp() {
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--disable-dev-shm-usage");
-//        options.addArguments("--no-sandbox");
-//        options.addArguments("--headless");
-//        driver = new ChromeDriver(options);
-//    }
-//
-//    @AfterEach
-//    public void tearDown() {
-//        driver.quit();
-//        driver = null;
-//    }
+
     @Test
 //    cssSelector
     void shouldTestData() {
