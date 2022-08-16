@@ -13,7 +13,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SeleniuMFormTest {
 
     WebDriver driver;
-
+//
+//@BeforeEach
+//void setup() {
+//    driver = WebDriverManager.chromedriver().create();
+//}
+//
+//    @AfterEach
+//    void teardown () {
+//        driver.quit();
+//    }
+//
+//    @Test
+//    void test() {
+//        // Your test logic here
+//    }
+//
+    
+//    
     @BeforeAll
     public static void setUpAll1() {
         System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
@@ -43,7 +60,6 @@ public class SeleniuMFormTest {
         driver.quit();
         driver = null;
     }
-
     @Test
 //    cssSelector
     void shouldTestData() {
@@ -52,7 +68,7 @@ public class SeleniuMFormTest {
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79272079600");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button")).click();
-        String actualText = driver.findElement(By.cssSelector(".paragraph")).getText().trim();
+        String actualText = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText().trim();
         String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         assertEquals(expected, actualText);
     }
